@@ -49,7 +49,7 @@ int main()
 				equation.push_back(-0.3);
 			}
 			else 
-			{
+			{   
 				y *= 10;
 				y += (double)(m[i] - 48);
 			}
@@ -59,13 +59,10 @@ int main()
 		
 		if ((equation[i] > -1 && equation[i] < 0) && (equation[i - 1] >= 0 || equation[i - 1] <= -1) && (equation[i - 2] >= 0 || equation[i - 2] <= -1)) 
 		{
-
-
 			if (equation[i] == -0.1) 
 			{
 				equation[i - 2] += equation[i - 1];
 				equation.erase(equation.begin() + i - 1); equation.erase(equation.begin() + i - 1);
-
 			}
 			else if (equation[i] == -0.2) 
 			{
@@ -85,5 +82,4 @@ int main()
 		cout << equation[0];
 		return 0;
 	}
-	
 }
